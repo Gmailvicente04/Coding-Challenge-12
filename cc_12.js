@@ -14,4 +14,16 @@ function createRevenueCard() {
 }
 createRevenueCard();
 
+// Task 2: Updating Dashboard Metrics – Working with NodeLists and Arrays
+function updateMetricCards() {
+    const metricCards = document.querySelectorAll(".metric-card");
+    const metricArray = Array.from(metricCards);
+    
+    metricArray.forEach(card => {
+        card.innerText += " - Updated";
+        card.style.backgroundColor = "#f0f0f0";
+    });
+}
+updateMetricCards();
+
 
