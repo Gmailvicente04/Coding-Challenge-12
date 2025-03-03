@@ -26,4 +26,23 @@ function updateMetricCards() {
 }
 updateMetricCards();
 
+// Task 3: Dynamic Inventory Management – Adding and Removing Items
+function addProductItem(productName) {
+    const inventoryList = document.getElementById("inventoryList");
+    const productItem = document.createElement("li");
+    
+    productItem.setAttribute("class", "product-item");
+    productItem.setAttribute("data-product", productName);
+    productItem.innerText = productName;
+    
+    productItem.addEventListener("click", function() {
+        inventoryList.removeChild(productItem);
+    });
+    
+    inventoryList.appendChild(productItem);
+}
+
+// Example usage:
+addProductItem("Product A");
+addProductItem("Product B");
 
