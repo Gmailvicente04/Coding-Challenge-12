@@ -46,3 +46,16 @@ function addProductItem(productName) {
 addProductItem("Product A");
 addProductItem("Product B");
 
+
+// Task 4: Business Customer Section – Handling Event Bubbling
+document.getElementById("customerSection").addEventListener("click", function() {
+    console.log("Customer section clicked");
+});
+
+document.querySelectorAll(".customer-card").forEach(card => {
+    card.addEventListener("click", function(event) {
+        console.log("Customer card clicked");
+        event.stopPropagation(); // Prevents bubbling
+    });
+});
+
